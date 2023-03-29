@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- NORMALIZE CSS -->
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="IMGs/favicon2.jpg" type="image/x-icon" />
+    <!-- TITLE -->
+    <title>GUESS GAME!</title>
+  </head>
+  <!-- JS -->
+  <script defer src="JS/app.js"></script>
+  <body>
+    <section class="app" id="app">
+      <div class="app-center">
+        <div class="top-side">
+          <button class="btn again" id="againBtn">again !</button>
+          <p class="game-info">"Between 1 and 20"</p>
+        </div>
+        <div class="guess-side">
+          <h1 class="main-title">guess my number !</h1>
+          <h2 class="secret-number" id="secret-number">?</h2>
+        </div>
+        <div class="bottom-side">
+          <div class="input-side">
+            <input
+              type="number"
+              class="input"
+              id="input"
+              placeholder="Number"
+              type="number"
+              min=""
+              max="20"
+            />
+            <button class="btn check" id="checkBtn">check !</button>
+          </div>
+          <div class="score-info">
+            <h3 id="info-text" class="score-info-text">💬 start</h3>
+            <h4 class="score" id="score">
+              🎯 score: <span id="scoreNumber" class="scoreNumber">20</span>
+            </h4>
+            <h4 class="highScore">
+              🥇 Highscore:
+              <span id="highScore" class="highscoreNumber">0</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

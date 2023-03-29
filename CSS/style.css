@@ -1,0 +1,228 @@
+/* GOOGLE FONTS -- LOBSTER*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lobster", cursive;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  background-color: rgb(30, 30, 30);
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  position: relative;
+}
+.app-center {
+  max-width: 1170px;
+  width: 90vw;
+  margin: 0 auto;
+  border: 8px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: white;
+}
+.top-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  background-color: #f1f5f8;
+  transition: all 0.3s linear;
+  border-radius: 5px;
+  border: none;
+}
+.again {
+  background-color: rgb(255, 165, 0);
+  color: black;
+}
+.again:hover {
+  background-color: rgb(195, 127, 0);
+}
+.game-info {
+  font-size: 1.5rem;
+  transition: all 0.2s linear;
+}
+.game-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 2px 0px orange;
+}
+.guess-side {
+  text-align: center;
+}
+.main-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+}
+.main-title:hover {
+  color: orange;
+}
+.score-info-text {
+  transition: all 0.3s linear;
+}
+.score-info-text:hover {
+  color: orange;
+}
+.score {
+  transition: all 0.3s linear;
+}
+.score:hover {
+  color: tomato;
+}
+.highScore {
+  transition: all 0.3s linear;
+}
+.highScore:hover {
+  color: blue;
+}
+.secret-number {
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 9rem;
+  font-size: 5rem;
+  background-color: #fff;
+  color: rgb(30, 30, 30);
+}
+.input-side {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.input {
+  height: 5rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 5px solid white;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  width: 12rem;
+  margin: 0 auto 1rem auto;
+}
+.input::placeholder {
+  color: white;
+}
+.check {
+  width: 9rem;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgb(214, 0, 37);
+  color: white;
+}
+.check:hover {
+  background-color: rgb(164, 0, 27);
+}
+.score-info {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+@media screen and (min-width) {
+  .top-side {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 670px) {
+  .bottom-side {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .score-info {
+    font-size: 1.7rem;
+  }
+  .btn {
+    text-align: center;
+    width: 10rem;
+    font-size: 1.8rem;
+  }
+  .game-info {
+    font-size: 2rem;
+  }
+  .secret-number {
+    font-size: 6rem;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .app-center {
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+  .main-title {
+    font-size: 4.3rem;
+  }
+  .score-info {
+    animation-name: rightSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .input-side {
+    animation-name: leftSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .again {
+    animation-name: leftSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .game-info {
+    animation-name: rightSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .score-info {
+    border: 3px dashed white;
+    padding: 0.5rem 2rem;
+    width: 30rem;
+  }
+  #secret-number {
+    transition: all 0.8s ease-in-out;
+  }
+  #secret-number:hover {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rightSide {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes leftSide {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
